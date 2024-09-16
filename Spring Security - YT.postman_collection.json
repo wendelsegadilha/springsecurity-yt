@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "d3625582-8565-44ed-88ea-162aa15794a9",
+		"name": "Spring Security - YT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18923630"
+	},
+	"item": [
+		{
+			"name": "localhost:8005/users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDAyQGdtYWlsLmNvbSIsImlhdCI6MTcyNjUxNjQ2OCwiZXhwIjoxNzI2NTIwMDY4fQ.CT8PdEV_XLCVNQ3VXAX6oBwQBVnmEcjAB27qpcgR5jI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8005/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8005/users/me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDAyQGdtYWlsLmNvbSIsImlhdCI6MTcyNjUxNjQ2OCwiZXhwIjoxNzI2NTIwMDY4fQ.CT8PdEV_XLCVNQ3VXAX6oBwQBVnmEcjAB27qpcgR5jI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8005/users/me",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8005/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"email02@gmail.com\",\r\n    \"password\": \"abcd123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8005/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8005/auth/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"email02@gmail.com\",\r\n    \"password\": \"abcd123\",\r\n    \"fullName\": \"User 02\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8005/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
